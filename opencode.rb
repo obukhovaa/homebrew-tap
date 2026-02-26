@@ -5,20 +5,20 @@
 class Opencode < Formula
   desc ""
   homepage ""
-  version "0.4.0"
+  version "0.4.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/obukhovaa/opencode/releases/download/v0.4.0/opencode-mac-x86_64.tar.gz"
-      sha256 "570ae07595fde22a22a0cee7de22cdd4862722cac471f0910bc01ddc969caa7c"
+      url "https://github.com/obukhovaa/opencode/releases/download/v0.4.1/opencode-mac-x86_64.tar.gz"
+      sha256 "26dcab3bc5751490978c927f4a6ff639bb9e7f713fd1026651a25f4210e47f45"
 
       define_method(:install) do
         bin.install "opencode"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/obukhovaa/opencode/releases/download/v0.4.0/opencode-mac-arm64.tar.gz"
-      sha256 "17942063180ed74efa2d9228d355da3eb3aa82e723323ef60aa6150dc9e403e2"
+      url "https://github.com/obukhovaa/opencode/releases/download/v0.4.1/opencode-mac-arm64.tar.gz"
+      sha256 "87a8e859a5bfcacddf01538d3a776110c7c4125d98e03f21839855ead8ad1c13"
 
       define_method(:install) do
         bin.install "opencode"
@@ -28,15 +28,15 @@ class Opencode < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/obukhovaa/opencode/releases/download/v0.4.0/opencode-linux-x86_64.tar.gz"
-      sha256 "192c351871a450b5c8e27d7d64fbbeb0239e0d9b464d035131a0bb871737ff68"
+      url "https://github.com/obukhovaa/opencode/releases/download/v0.4.1/opencode-linux-x86_64.tar.gz"
+      sha256 "5097f9e5674cfca6c2803ef0188972aff62668b9dd831ffb05f5b06a928ed555"
       define_method(:install) do
         bin.install "opencode"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/obukhovaa/opencode/releases/download/v0.4.0/opencode-linux-arm64.tar.gz"
-      sha256 "593ec1efb5542f68196576c010fa4b5150d374d5875550f0bacdc098f4d395e1"
+      url "https://github.com/obukhovaa/opencode/releases/download/v0.4.1/opencode-linux-arm64.tar.gz"
+      sha256 "9b76190ce654b61633cd00febd9efd65fc8accb23d20650b7317d1058be04cbc"
       define_method(:install) do
         bin.install "opencode"
       end
