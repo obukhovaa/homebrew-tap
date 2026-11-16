@@ -5,39 +5,39 @@
 class Opencode < Formula
   desc ""
   homepage ""
-  version "0.30.6"
+  version "0.31.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/obukhovaa/opencode/releases/download/v0.30.6/opencode-mac-x86_64.tar.gz"
-      sha256 "f41b12dae4a67c36d42df3e374216d00af184acbc851a1d8bd523900d2ae3cff"
+      url "https://github.com/obukhovaa/opencode/releases/download/v0.31.0/opencode-mac-x86_64.tar.gz"
+      sha256 "1c2370bdf967f53de5e1ccf26d0156511ac0e696cc28d61bdb307643c49667fb"
 
-      define_method(:install) do
+      def install
         bin.install "opencode"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/obukhovaa/opencode/releases/download/v0.30.6/opencode-mac-arm64.tar.gz"
-      sha256 "a652ebe64d8fbf90174e972490c931cfc46867a931c406ac594c371ecb9b0f3e"
+      url "https://github.com/obukhovaa/opencode/releases/download/v0.31.0/opencode-mac-arm64.tar.gz"
+      sha256 "120f611b95845b7ae0d1d47ab8616b54979971802e325436920e3499a95a7c76"
 
-      define_method(:install) do
+      def install
         bin.install "opencode"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/obukhovaa/opencode/releases/download/v0.30.6/opencode-linux-x86_64.tar.gz"
-      sha256 "7e6d9aef64797db2916ee51fb7cb43564ac2cf88b2792ee433e50fe67a9a4999"
-      define_method(:install) do
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/obukhovaa/opencode/releases/download/v0.31.0/opencode-linux-x86_64.tar.gz"
+      sha256 "29b8fdf80f8b860cd5ca12c9258515fb0f1087d3bfeca09f61f5768a1c4e5ccf"
+      def install
         bin.install "opencode"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/obukhovaa/opencode/releases/download/v0.30.6/opencode-linux-arm64.tar.gz"
-      sha256 "bc32db277d6242df033c43e992050cb4639302603f8930cf3d231cea41b67738"
-      define_method(:install) do
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/obukhovaa/opencode/releases/download/v0.31.0/opencode-linux-arm64.tar.gz"
+      sha256 "1abba3c9abfff5125ff31eb0f3711923b689e642a2afa1a25f483842f0467e87"
+      def install
         bin.install "opencode"
       end
     end
