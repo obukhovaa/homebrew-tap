@@ -5,20 +5,20 @@
 class Opencode < Formula
   desc ""
   homepage ""
-  version "0.32.4"
+  version "0.32.5"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/obukhovaa/opencode/releases/download/v0.32.4/opencode-mac-x86_64.tar.gz"
-      sha256 "622cd739fb0943d4c97f3d634faed2d31df6bd228ecb31f91db56ceab44116d7"
+      url "https://github.com/obukhovaa/opencode/releases/download/v0.32.5/opencode-mac-x86_64.tar.gz"
+      sha256 "c8b764a174fd704b6e72025c23e67ccf51be44ed486d9d38e70ae03ff6169e05"
 
       def install
         bin.install "opencode"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/obukhovaa/opencode/releases/download/v0.32.4/opencode-mac-arm64.tar.gz"
-      sha256 "7cc1c0ceaed47faec16f6ab3949e3271c861fd7c4aee6e112f18638093e1c805"
+      url "https://github.com/obukhovaa/opencode/releases/download/v0.32.5/opencode-mac-arm64.tar.gz"
+      sha256 "ed9abfa3352a97a9ed72b37df67ce27cfc93cf7311f72490f9ef32eedf8e6b24"
 
       def install
         bin.install "opencode"
@@ -28,15 +28,15 @@ class Opencode < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/obukhovaa/opencode/releases/download/v0.32.4/opencode-linux-x86_64.tar.gz"
-      sha256 "dcba4fb7cff5c9a43f9156e93b574056a0536eb51444eda7e4beca62664e807c"
+      url "https://github.com/obukhovaa/opencode/releases/download/v0.32.5/opencode-linux-x86_64.tar.gz"
+      sha256 "cde845064961ac917dd2cd1a3bfc802b9ca159a5866feccefda9d044b00c35aa"
       def install
         bin.install "opencode"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/obukhovaa/opencode/releases/download/v0.32.4/opencode-linux-arm64.tar.gz"
-      sha256 "ab96d49d1e050c8ac201cdf141f18cca7aeb91a8518732c41e98dc65d870144d"
+      url "https://github.com/obukhovaa/opencode/releases/download/v0.32.5/opencode-linux-arm64.tar.gz"
+      sha256 "6114117e5993e283dc1682ada62dbad6f8b307025e8d067d579b4f23409bae74"
       def install
         bin.install "opencode"
       end
